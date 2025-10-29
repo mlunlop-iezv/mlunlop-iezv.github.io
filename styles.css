@@ -1,43 +1,73 @@
+@font-face {
+    font-family: 'Hanken Grotesk';
+    src:  url('assets/fonts/hanken-grotesk/HankenGrotesk-Regular.woff2'),
+          url('assets/fonts/hanken-grotesk/HankenGrotesk-Regular.woff'),
+          url('assets/fonts/hanken-grotesk/HankenGrotesk-Regular.otf');
+}
+
+@font-face {
+    font-family: 'Niagara Solid';
+    src:  url('assets/fonts/niagara-solid/niagara-solid.woff2')
+          url('assets/fonts/niagara-solid/niagara-solid.woff'),    
+          url('assets/fonts/niagara-solid/niagara-solid.ttf');       
+}
+
+
+
 body {
   margin: 0;
   font-family: "Hanken Grotesk", sans-serif;
-  background: #444;
+  background: #d9d9d9;
   overflow-x: hidden;
 }
 
 .main-container {
   width: 100%;
   position: relative;
+  padding: 0;
+
 }
 
 .section-line {
-  position: absolute;
-  left: 75px;
-  bottom: 0;
-  width: 1770px;
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
   border-top: 3px solid #c1272d;
+  
+}
+
+.header-text {
+  position: relative;
+  font-family: "Niagara Solid";
+  font-size: 9rem;
+  color: #c1272d;
+  background: linear-gradient(
+      to bottom,   
+      black 60%,   
+      #d9d9d9 40%  
+  );
 }
 
 /* --- HEADER -------------------------------------------------------------------------------------------------------------------------------------------------------- */ 
 .main-header {
   width: 100%;
-  background: #d9d9d9; 
-  
+  height: 60px;
+  padding: 2rem 5rem;
   display: flex;
   align-items: center; 
   justify-content: space-between; 
-  
-  padding: 0 75px; 
+
+
   box-sizing: border-box; 
   position: relative; 
-  z-index: 10;
 }
 
 .header-logo {
   font-family: "Niagara Solid";
-  font-size: 5.5rem;
+  font-size: 4rem;
   color: #c1272d;
   line-height: 1; 
+  padding: 1;
 }
 
 .header-logo a{
@@ -68,9 +98,7 @@ body {
 
 /*--- HERO SECTION -------------------------------------------------------------------------------------------------------------------------------------------------------- */ 
 .hero {
-  height: 95vh;
-  background: #d9d9d9;
-  
+  height: calc(100vh - 60px);
 
   display: flex;
   flex-direction: column; 
@@ -120,189 +148,307 @@ body {
 }
 
 
-/* --- BIOGRAPHY SECTION --- */
+/* --- BIOGRAPHY SECTION -------------------------------------------------------------------------------------------------------------------------------------------------------- */
 .biography {
   position: relative;
-  height: 100vh;
-  background: #d9d9d9;
+  height: 170vh;
+  padding: 2rem 5rem;
+
+  background-image: url(assets/ifmg/bg-bio.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%
 }
 
-.bio-header {
-  position: absolute;
-  left: 75px;
-  top: 75px;
-  font-family: "Niagara Solid";
-  font-size: 150px;
-  color: #c1272d;
-}
+
 
 .bio-subheader {
-  position: absolute;
-  left: 75px;
-  top: 238px;
+  position: relative;
   font-size: 36px;
   font-weight: 700;
-  color: #c1272d;
+  color: #D16165;
+}
+
+
+.bio-content1{
+  display: flex;
+}
+
+.bio-main-text{
+  flex: 2;
 }
 
 .bio-text {
-  position: absolute;
-  left: 75px;
-  top: 326px;
-  width: 1175px;
-  font-size: 36px;
+  position: relative;
+  flex: 1;
+
+
+  font-size: 2rem;
   color: #1e1e1e;
   font-weight: 500;
 }
 
-.bio-img {
-  position: absolute;
-  left: 1333px;
-  top: 127px;
-  width: 512px;
-  height: 792px;
+.bio-img1 {
+  position: relative;
+  flex: 2;
+  max-width: 417px;
+  height: 744px;
+  background-image: url(assets/img/bio-img1.png);
+  background-size: cover;
+  margin-left: 2rem;
+}
+
+.bio-content2{
+  display: flex;
+  
+}
+
+.bio-content2 >.bio-text{
+  padding: 5rem;
+}
+
+.bio-img-2 {
+  position: relative;
+  flex: 2;
+  max-width: 417px;
+  height: 744px;
+  background-image: url(assets/img/bio-img2.jpg);
+  background-size: cover;
 }
 
 
 
-/* --- ALBUMS --- */
+/* --- ALBUMS -------------------------------------------------------------------------------------------------------------------------------------------------------- */
 .albums {
   position: relative;
-  height: 100vh;
+  height: 150vh;
   background: #d9d9d9;
   text-align: center;
 }
 
+.album-box {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.album-box > .section-line{
+  margin-top: 2rem;
+}
+
+.spotify-albums {
+  position: relative; 
+  margin: 0 auto;
+  padding-top: 1rem; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  z-index: 20;
+}
+
+.spotify-albums iframe {
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.spotify-albums iframe:hover {
+  transform: scale(1.03);
+}
+
 .album-title {
-  font-family: "Niagara Solid";
-  font-size: 628px;
-  color: #d16165;
-  margin-top: 50px;
+  position: relative;
+  z-index: 10;
+ 
+  justify-content: center;
+  font-family: "Niagara Solid", serif;
+  color: #c1272d;
+  font-size: 25rem;
+
 }
 
 .album-banner {
   position: absolute;
-  top: 584px;
-  left: 0;
-  width: 1920px;
-  height: 496px;
+  background-image: url(assets/img/music-bg.png);
+  height: 50vh;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0;
+  z-index: 5;
 }
 
-.album-card {
-  position: relative;
-  display: inline-block;
-  width: 390px;
-  height: 465px;
-  background: white;
-  margin: 75px 50px;
-  box-shadow: 0 6px 4px rgba(0,0,0,0.25);
-  border-radius: 5px;
-  vertical-align: top;
+.last-release{
+  font-size: 5.5rem;
+  font-weight: 700;
+  color: #D16165;
+  margin-top: 3rem;
+  justify-content: center;
+  font-family: "Niagara Solid";
+  font-weight: 1;
 }
 
-.album-card img {
-  width: 390px;
-  height: 390px;
-  border-radius: 5px 5px 0 0;
-}
-
-.album-name {
-  padding: 10px;
-  font-size: 24px;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
-/* --- TOUR --- */
+/* --- TOUR -------------------------------------------------------------------------------------------------------------------------------------------------------- */
 .tour {
   position: relative;
   height: 100vh;
   background: #d9d9d9;
 }
 
-.tour-title {
-  position: absolute;
-  left: 803px;
-  top: 100px;
-  font-family: "Niagara Solid";
-  font-size: 150px;
-  color: #c1272d;
+.tour > .header-text {
+  margin: 2rem;
+  text-align: center;
 }
 
-.tour-img-right {
-  position: absolute;
-  right: 75px;
-  top: 259px;
-  width: 479px;
-  height: 718px;
-}
+.tour-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start; 
+  gap: 1rem; 
+  width: 100%;
+  max-width: 1500px; 
 
-.tour-img-left {
-  position: absolute;
-  left: 75px;
-  top: 299px;
-  width: 500px;
-  height: 375px;
-}
-
-.tour-dates {
-  position: absolute;
-  left: 637px;
-  top: 310px;
-  font-size: 32px;
-  color: black;
-}
-
-/* --- MERCH --- */
-.merch {
   position: relative;
-  height: 50vh;
+  z-index: 10;
+}
+
+.tour-video-left {
+  flex: 1; /* Como pediste */
+  min-width: 600px; /* Evita que se encoja demasiado */
+  padding: 4rem;
+}
+
+.tour-video-left video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  border-collapse: collapse; 
+  font-size: 1.5rem;
+}
+td {
+  padding: 1rem .5rem;
+  border-top: 1px solid black; 
+  border-bottom: 1px solid black; 
+}
+
+.tour-arm {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url('assets/img/on-tour-arm.png') no-repeat;
+  background-size: contain; 
+  width: 304px;
+  height: 691px;
+  z-index: 1;
+}
+
+
+/* --- SHOP -------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.shop {
+  position: relative;
+  height: 60vh;
   background: #d9d9d9;
+  flex-direction: column;
 }
 
-.merch-title {
+.shop > .header-text {
+  margin: 2rem;
+  padding-left: 1rem;
+  width: 100%;
+}
+
+.shop-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 95%;
+}
+
+.shop-item {
+  position: relative; 
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden; 
+  
+}
+
+.shop-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.shop-item .price {
   position: absolute;
-  left: 86px;
-  top: 20px;
-  font-family: "Niagara Solid";
-  font-size: 150px;
-  color: #c1272d;
-}
-
-.merch-item {
-  position: relative;
-  display: inline-block;
-  width: 350px;
-  margin: 140px 70px;
-}
-
-.merch-item img {
-  width: 350px;
-  height: 350px;
-  box-shadow: 0 4px 4px rgba(0,0,0,0.25);
-}
-
-.merch-item .price {
+  top: 1rem;
+  left: 1rem;
   font-size: 32px;
   color: black;
-  margin-top: 10px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  z-index: 10;
+  margin-top: 0;
 }
 
-.merch-item .buy-btn {
-  width: 145px;
-  height: 45px;
+
+.shop-item .buy-btn {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 10;
+  
   background: black;
   color: white;
-  text-align: center;
-  line-height: 45px;
-  font-size: 32px;
-  margin-top: 5px;
+  height: 45px;
+  padding: 0 1rem; 
+  font-size: 28px;
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  
+  display: flex;
+  align-items: center;    
+  justify-content: center; 
+  gap: 0.5rem;            
+
+  margin-top: 0;
 }
 
-/* --- CONTACT --- */
+.shop-item .buy-btn:hover {
+  background-color: #333;
+}
+
+.shop-item .buy-btn svg {
+  width: 24px;
+  height: 24px;
+  
+  fill: white; 
+}
+
+/* --- CONTACT -------------------------------------------------------------------------------------------------------------------------------------------------------- */
 .contact {
   position: relative;
-  height: 50vh;
+  height: 100vh;
   background: black;
   color: white;
 }
@@ -359,7 +505,12 @@ body {
   height: 50px;
 }
 
-/* --- FOOTER --- */
+.mapa-monocromo {
+  filter: grayscale(100%) invert(100%);
+  margin-top: 50vh;
+}
+
+/* --- FOOTER -------------------------------------------------------------------------------------------------------------------------------------------------------- */
 .footer {
   position: relative;
   height: 50vh;
@@ -400,7 +551,7 @@ body {
 }
 
 
-/* --- Media Queries --- */
+/* --- MEDIA QUERIES -------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 @media (min-width: 1000px) {
 
@@ -440,5 +591,73 @@ body {
   }
   .hero-subtitle {
     font-size: 1.5rem; /* Reducimos aún más en móviles */
+  }
+}
+
+/* --- MENU HAMBURGUESA SIN JS --- */
+#menu-toggle {
+  display: none;
+}
+
+/* Ícono del menú (hamburguesa) */
+.menu-icon {
+  display: none;
+  font-size: 32px;
+  color: #c1272d;
+  cursor: pointer;
+  user-select: none;
+  z-index: 10000;
+}
+
+/* Estilos móviles */
+@media (max-width: 1200px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #f3f3f3;
+    border-top: 1px solid #c1272d;
+    flex-direction: column;
+    text-align: center;
+    z-index: 9999; /* encima de todo */
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .main-nav li {
+    border-bottom: 1px solid #c1272d;
+    padding: 1.2rem 0;
+  }
+
+  .main-nav a {
+    color: #c1272d;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .main-nav a:hover {
+    text-decoration: underline;
+  }
+
+  /* Mostrar el menú al activar el checkbox */
+  #menu-toggle:checked + .menu-icon + .main-nav {
+    display: flex;
+  }
+
+  /* Permitir hacer clic en los enlaces cuando el menú está abierto */
+  #menu-toggle:checked + .menu-icon {
+    pointer-events: none;
   }
 }
