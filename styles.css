@@ -1015,6 +1015,11 @@ textarea::placeholder {
     .footer {
         height: auto;
     }
+
+    .footer-img{
+      background-position:right;
+    }
+    
     .footer-topband {
         height: auto;
         padding: 1.5rem 0;
@@ -1049,4 +1054,5 @@ textarea::placeholder {
     .album-title {
         font-size: 6rem;
     }
+
 }
