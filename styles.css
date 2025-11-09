@@ -680,6 +680,7 @@ table tbody tr:nth-child(2) a::before{
   border: none;
   border-bottom: 2px solid white;
   font-size: 1.5rem;
+  color: white;
 }
 
 input::placeholder,
@@ -768,12 +769,25 @@ textarea::placeholder {
 }
 
 .footer-content{
- 
   display: flex;                
-  justify-content: flex-end;    
+  justify-content: center;    
   align-items: center; 
   padding-right: 10rem;  
-  padding-top: 2rem;       
+  padding-top: 2rem;  
+      
+}
+
+.footer-nav{
+  flex: 1;
+  margin: 0 0 2rem 2rem;
+  ul{
+    list-style-type:none;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+  }
 }
 
 .footer-header {
@@ -783,7 +797,7 @@ textarea::placeholder {
  
   text-align: center;
   line-height: 0.9;
-  margin-bottom: -0.5;
+  
 }
 
 .footer-subtext{
@@ -857,7 +871,25 @@ textarea::placeholder {
         margin-left: 0;
         font-size: 1.1rem;
     }
+    /* --- FOOTER ----------------------------------------------------- */
+    .footer-nav{
+      display: none;
+    }
 
+    .footer-content{               
+     justify-content: flex-end;    
+     padding-right: 5rem;  
+    }
+
+.footer-header {
+  font-family: "Niagara Solid";
+  font-size: 8rem;
+  color: #c1272d;
+ 
+  text-align: center;
+  line-height: 0.9;
+  margin-bottom: -0.5;
+}
 
 }
 
@@ -1188,12 +1220,7 @@ textarea::placeholder {
     .footer-topband a {
         margin: 0 15px;
     }
-    .footer-content {
-        padding: 3rem 0;
-        justify-content: center;
-        flex-direction: column;
-        text-align: center;
-    }
+
     .social-icons img {
         margin: 0 10px 2rem 10px; 
     }
