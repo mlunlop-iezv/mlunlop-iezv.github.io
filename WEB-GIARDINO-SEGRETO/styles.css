@@ -46,6 +46,7 @@ body {
     font-size: clamp(1.125rem, 1.5vw + 0.8rem, 2.5rem);
 }
 
+
 .submit-btn {
     display: inline-flex;
     justify-content: center;
@@ -69,10 +70,19 @@ body {
     transition: all 0.4s ease;
 }
 
+
+.submit-btn.btn-inverted {
+    background-color: var(--color-0); 
+    border: 1px solid var(--color-0); 
+    color: var(--color-100);         
+}
+
+
 #nav-icon,
 .menu_mobile {
     display: none;
 }
+
 
 
 /*------------- NAV ----------------------------------------------*/
