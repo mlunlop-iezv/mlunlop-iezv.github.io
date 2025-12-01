@@ -603,9 +603,9 @@ footer {
 
 /*------------- 2.2 JOIN US ----------------------------------------------*/
 .join-us {
-    padding: 4.5rem 0 4rem 0;
+    padding: 4.5rem 0 12rem 0;
     text-align: center;
-    height: 100vh;
+    height: auto;
 
     h1 {
         font-family: NessynSentry;
@@ -1264,7 +1264,7 @@ footer {
     }
 }
 
-/*------------- 992PX SCREEN  --------------------------------------------------*/
+/*------------- 992PX SCREEN --------------------------------------------------*/
 @media (max-width: 992px) {
     header nav ul {
         gap: 1.5rem;
@@ -1318,14 +1318,31 @@ footer {
         height: 85vh;
     }
 
+    /* --- TEAM FIX (CORREGIDO: Reseteo de posición para que la imagen ocupe espacio) --- */
     .team .team-container .main-chefs {
         flex-direction: column;
+    }
+
+    .team .team-container .main-chefs .chef-photo {
+        width: 100%;
+        height: auto; /* Dejamos que la altura sea automática */
+        aspect-ratio: auto; /* Eliminamos restricciones de aspecto si las hubiera */
+    }
+
+    /* IMPORTANTE: Quitamos el position absolute de la imagen para que "empuje" el contenedor */
+    .team .team-container .main-chefs .chef-photo img {
+        position: static; 
+        width: 100%;
+        height: auto;
+        max-height: 60vh; /* Limitamos la altura para que no sea gigante */
+        object-fit: cover;
     }
 
     .team .team-container .main-chefs .chef-text {
         padding-left: 0;
         margin-top: 2rem;
     }
+    /* -------------------------------------------------------------------------------- */
 
     .join-us .join-us-text {
         flex-direction: column;
@@ -1363,7 +1380,7 @@ footer {
     }
 }
 
-/*------------- 768PX SCREEN  --------------------------------------------------*/
+/*------------- 768PX SCREEN --------------------------------------------------*/
 @media (max-width: 768px) {
     .desktop-nav {
         display: none;
@@ -1442,7 +1459,7 @@ footer {
         .menu_footer {
             position: absolute;
             bottom: 2rem;
-            font-family: 'BDSans', sans-serif;
+            font-family: 'BDSans';
             color: var(--color-50);
             font-size: 0.9rem;
             letter-spacing: 2px;
@@ -1481,6 +1498,10 @@ footer {
     .team .team-container .inf-chefs {
         flex-direction: column;
         padding: 2rem;
+    }
+
+    .team .team-container .inf-chefs .inf-chef-photo {
+        display: none;
     }
 
     .signature-dish .dish {
@@ -1528,7 +1549,7 @@ footer {
     }
 }
 
-/*------------- 576PX SCREEN  --------------------------------------------------*/
+/*------------- 576PX SCREEN --------------------------------------------------*/
 @media (max-width: 576px) {
     body {
         margin: 0 1.5rem;
@@ -1559,7 +1580,6 @@ footer {
     }
 
     footer .footer-subtitle {
-
         line-height: 1;
     }
 
@@ -1606,4 +1626,3 @@ footer {
         padding: 1rem;
     }
 }
-
