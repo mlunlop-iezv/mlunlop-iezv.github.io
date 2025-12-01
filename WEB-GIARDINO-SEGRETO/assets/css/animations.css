@@ -104,7 +104,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 4px; 
+    height: 6px; 
     background: var(--color-0); 
     z-index: 9999;
 }
@@ -116,23 +116,53 @@
     transition: width 0.1s ease-out; 
 }
 
-/* -------------------------------------------------------------
-   4. ANIMACIÓN ICONOS SOCIALES (Footer & Team)
-   ------------------------------------------------------------- */
+/*------------------------ SOCIAL MEDIA ICONS ANIMATION --------------------*/
 
-/* ESTADO INICIAL (Normal) */
-/* Seleccionamos las imágenes del footer y los SVGs del equipo */
 .footer-social-media img,
 .chef-social-media svg {
-    opacity: 0.8;          /* Semi-transparente (50%) */
-    transform: scale(1);   /* Tamaño original */
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Transición con un pequeño rebote elegante */
-    cursor: pointer;       /* Asegura que salga la manita */
+    opacity: 0.8;          
+    transform: scale(1);   
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    cursor: pointer;      
 }
 
-/* ESTADO HOVER (Al pasar el ratón) */
 .footer-social-media img:hover,
 .chef-social-media svg:hover {
-    opacity: 1;            /* Totalmente visible (Color sólido) */
-    transform: scale(1.2); /* Crece un 20% */
+    opacity: 1;            
+    transform: scale(1.15);
+}
+
+/* -------------------------------------------------------------
+   5. ANIMACIÓN BOTONES "SLIDING FILL" (Unificada)
+   ------------------------------------------------------------- */
+
+/* 1. La capa de relleno (el fantasma) */
+.submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;        /* Empieza vacía */
+    height: 100%;
+    background-color: var(--color-100); /* Color Beige */
+    z-index: -1;      /* Detrás del texto */
+    
+    /* Animación suave */
+    transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* 2. Al pasar el ratón: La barra crece */
+.submit-btn:hover::before {
+    width: 100%;
+}
+
+/* 3. Al pasar el ratón: El texto cambia a negro */
+.submit-btn:hover {
+    color: var(--color-0);
+}
+
+/* 4. Al pasar el ratón: La flecha SVG (si la hay) cambia a negro */
+.submit-btn:hover svg {
+    stroke: var(--color-0);
+    transition: stroke 0.4s ease;
 }

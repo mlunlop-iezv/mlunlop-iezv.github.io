@@ -46,6 +46,35 @@ body {
     font-size: clamp(1.125rem, 1.5vw + 0.8rem, 2.5rem);
 }
 
+.submit-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    background: transparent;
+    border: 1px solid var(--color-100);
+    color: var(--color-100);
+
+    padding: 1rem 4rem;
+    font-size: clamp(1.25rem, 0.25vw + 1.15rem, 1.5rem);
+    text-transform: uppercase;
+    font-family: 'BDSans';
+
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    transition: all 0.4s ease;
+}
+
+#nav-icon,
+.menu_mobile {
+    display: none;
+}
+
+
 /*------------- NAV ----------------------------------------------*/
 header {
     display: flex;
@@ -454,7 +483,6 @@ footer {
 
 
 
-
 /*------------- 2. TEAM PAGE: -----------------------------------------------------------------------------------------------*/
 /*------------- 2.1 TEAM ----------------------------------------------*/
 .team {
@@ -633,19 +661,12 @@ footer {
         .join-us-right {
             flex: 1;
 
-            a {
-                display: inline-block;
-                color: var(--color-0);
-                background-color: var(--color-100);
-                text-decoration: none;
-                text-transform: uppercase;
+            .submit-btn {
                 margin-top: 2rem;
-                padding: 0 2rem;
             }
         }
     }
 }
-
 
 
 
@@ -834,7 +855,6 @@ footer {
         }
     }
 }
-
 
 
 
@@ -1196,29 +1216,6 @@ footer {
                         }
                     }
                 }
-
-                .submit-btn {
-                    background: transparent;
-                    border: 1px solid var(--color-100);
-                    color: var(--color-100);
-                    padding: 1rem 4rem;
-                    font-size: clamp(1.25rem, 0.25vw + 1.15rem, 1.5rem);
-                    text-transform: uppercase;
-                    cursor: pointer;
-                    display: flex;
-                    align-items: center;
-                    gap: 1rem;
-                    transition: all 0.4s ease;
-
-                    &:hover {
-                        background-color: var(--color-100);
-                        color: var(--color-0);
-
-                        svg {
-                            stroke: var(--color-0);
-                        }
-                    }
-                }
             }
         }
     }
@@ -1241,12 +1238,6 @@ footer {
 
 
 
-
-
-#nav-icon,
-.menu_mobile {
-    display: none;
-}
 
 /*--------------- MEDIA QUERIES -----------------------------------------------------------------------------------------------*/
 /*------------- 1200PX SCREEN  --------------------------------------------------*/
