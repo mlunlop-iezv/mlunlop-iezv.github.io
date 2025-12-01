@@ -1239,7 +1239,16 @@ footer {
 }
 
 
+
+
+
+
+#nav-icon, 
+.menu_mobile {
+    display: none;
+}
 /*--------------- MEDIA QUERIES -----------------------------------------------------------------------------------------------*/
+/*------------- 1200PX SCREEN  --------------------------------------------------*/
 @media (max-width: 1200px) {
     body {
         margin: 0 3rem;
@@ -1255,6 +1264,7 @@ footer {
     }
 }
 
+/*------------- 992PX SCREEN  --------------------------------------------------*/
 @media (max-width: 992px) {
     header nav ul {
         gap: 1.5rem;
@@ -1353,7 +1363,95 @@ footer {
     }
 }
 
+/*------------- 768PX SCREEN  --------------------------------------------------*/
 @media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    header {
+        justify-content: flex-end;
+        position: relative;
+        z-index: 1000;
+
+        #nav-icon {
+            display: block;
+            width: 35px;
+            height: 25px;
+            position: relative;
+            cursor: pointer;
+            margin-right: 1rem;
+            z-index: 1001;
+        }
+    }
+
+    .menu_mobile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        z-index: 999;
+        background-color: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(10px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        transition: height 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+
+        &.open-menu {
+            height: 100vh;
+
+            .menu_mobile_nav {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .menu_footer {
+                opacity: 1;
+            }
+        }
+
+        .menu_mobile_nav {
+            list-style: none;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease 0.3s;
+
+            li a {
+                font-family: 'NessynSentry', serif;
+                font-size: clamp(2.5rem, 5vw, 4rem);
+                color: var(--color-100);
+                text-decoration: none;
+                text-transform: uppercase;
+                font-weight: 100;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: var(--color-50);
+                }
+            }
+        }
+
+        .menu_footer {
+            position: absolute;
+            bottom: 2rem;
+            font-family: 'BDSans', sans-serif;
+            color: var(--color-50);
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: 0;
+            transition: opacity 0.5s ease 0.5s;
+        }
+    }
+    
     header {
         height: auto;
         padding: 1rem 0;
@@ -1430,6 +1528,7 @@ footer {
     }
 }
 
+/*------------- 576PX SCREEN  --------------------------------------------------*/
 @media (max-width: 576px) {
     body {
         margin: 0 1.5rem;
@@ -1507,3 +1606,4 @@ footer {
         padding: 1rem;
     }
 }
+

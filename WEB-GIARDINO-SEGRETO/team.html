@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
     <link rel="shortcut icon" href="assets/img/GiardinoSegreto.ico">
     <title>Team | Giardino Segreto</title>
 </head>
@@ -13,7 +14,7 @@
     <div class="wrapper">
         <!--NAV-->
         <header>
-            <nav>
+            <nav class="desktop-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li class="selected"><a href="team.html">Team</a></li>
@@ -21,7 +22,25 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
+
+            <div id="nav-icon">
+                <span></span><span></span>
+                <span></span><span></span>
+                <span></span><span></span>
+            </div>
         </header>
+
+        <div class="menu_mobile">
+            <ul class="menu_mobile_nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu_footer">
+                <p>Giardino Segreto</p>
+            </div>
+        </div>
 
         <!--HERO SECTION-->
         <section class="hero">
@@ -354,6 +373,12 @@
         </footer>
 
     </div>
+        <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+
+    <script src="assets/js/burguer.js"></script>
+    <script src="assets/js/scroll.js"></script>
 </body>
 
 </html>
