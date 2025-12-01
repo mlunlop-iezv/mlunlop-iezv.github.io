@@ -85,7 +85,7 @@ body {
 
 
 
-/*------------- NAV ----------------------------------------------*/
+/*------------- NAV ----------------------------------------------------------*/
 header {
     display: flex;
     justify-content: center;
@@ -116,7 +116,7 @@ header {
 
 }
 
-/*------------- HERO ----------------------------------------------*/
+/*------------- HERO ---------------------------------------------------------*/
 .hero {
     height: 90vh;
     text-align: center;
@@ -194,7 +194,7 @@ header {
     }
 }
 
-/*------------- FOOTER ----------------------------------------------*/
+/*------------- FOOTER -------------------------------------------------------*/
 footer {
     height: auto;
     display: flex;
@@ -330,7 +330,7 @@ footer {
 
 
 /*------------- 1. HOME PAGE: -----------------------------------------------------------------------------------------------*/
-/*------------- 1.1 STORY ----------------------------------------------*/
+/*------------- 1.1 STORY -----------------------------------------------------*/
 .story {
     height: auto;
     position: relative;
@@ -414,7 +414,7 @@ footer {
 
 }
 
-/*------------- 1.2 GALLERY --------------------------------------------*/
+/*------------- 1.2 GALLERY ---------------------------------------------------*/
 .gallery {
     height: 100vh;
     padding: 5rem 0 5rem 0;
@@ -494,7 +494,7 @@ footer {
 
 
 /*------------- 2. TEAM PAGE: -----------------------------------------------------------------------------------------------*/
-/*------------- 2.1 TEAM ----------------------------------------------*/
+/*------------- 2.1 TEAM ------------------------------------------------------*/
 .team {
 
     .team-text {
@@ -639,7 +639,7 @@ footer {
     }
 }
 
-/*------------- 2.2 JOIN US ----------------------------------------------*/
+/*------------- 2.2 JOIN US ---------------------------------------------------*/
 .join-us {
     padding: 4.5rem 0 12rem 0;
     text-align: center;
@@ -869,7 +869,7 @@ footer {
 
 
 
-/*------------- 4. CONTACT PAGE: -----------------------------------------------------------------------------------------------*/
+/*------------- 4. CONTACT PAGE: --------------------------------------------------------------------------------------------*/
 /*------------- 4.1 BOOK A TABLE ----------------------------------------------*/
 .book-table {
     height: auto;
@@ -1231,7 +1231,7 @@ footer {
     }
 }
 
-/*------------- 4.3 MAP  --------------------------------------------------*/
+/*------------- 4.3 MAP  ------------------------------------------------------*/
 .map {
     height: 50vh;
     margin-bottom: 5rem;
@@ -1245,11 +1245,101 @@ footer {
     }
 }
 
+/*------------- 4.4 VISIT US  -------------------------------------------------*/
+.visit-us {
+    background-color: var(--color-100);
+    color: var(--color-0);
+    padding: 6rem 0;
+    margin-bottom: 5rem;
+
+    .visit-container {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        gap: 6rem;
+        align-items: flex-start;
+
+        .visit-col {
+            flex: 1;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .visit-title {
+                font-family: NessynSentry;
+                font-size: clamp(3rem, 4vw + 1rem, 5rem);
+                margin-bottom: 2rem;
+                font-weight: 100;
+                line-height: 1;
+            }
+        }
+
+        .visit-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            li {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+
+                .day {
+                    font-family: 'BDSans';
+                    font-size: clamp(1.25rem, 0.5vw + 1rem, 1.5rem);
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                }
+
+                .time {
+                    font-family: 'ElmsSans';
+                    font-size: clamp(1.125rem, 0.25vw + 1rem, 1.25rem);
+                    opacity: 0.8;
+                    
+                    &.closed {
+                        opacity: 0.5;
+                        font-style: italic;
+                    }
+                }
+            }
+        }
+
+        .visit-divider {
+            width: 1px;
+            background-color: var(--color-0);
+            opacity: 0.2;
+            min-height: 300px;
+        }
+
+        .address {
+            font-style: normal;
+            font-family: 'ElmsSans', sans-serif;
+            font-size: clamp(1.5rem, 0.5vw + 1.2rem, 2rem);
+            line-height: 1.4;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            
+            p { margin: 0; }
+        }
+        
+        .submit-btn {
+            width: auto; 
+            min-width: 200px;
+        }
+    }
+}
 
 
 
 
-/*--------------- MEDIA QUERIES -----------------------------------------------------------------------------------------------*/
+
+/*--------------- MEDIA QUERIES -------------------------------------------------------------------------------------------*/
 /*------------- 1200PX SCREEN  --------------------------------------------------*/
 @media (max-width: 1200px) {
     body {
@@ -1383,6 +1473,29 @@ footer {
     .contact .contact-wrapper .form .form-row {
         flex-direction: column;
         gap: 2rem;
+    }
+
+    .visit-us {
+        padding: 4rem 0;
+
+        .visit-container {
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+            gap: 3rem;
+
+            .visit-col {
+                width: 100%;
+            }
+
+            .visit-divider {
+                width: 50%;      
+                height: 1px;     
+                min-height: 1px;
+                align-self: center;
+                margin: 1rem 0;
+            }
+        }
     }
 }
 
@@ -1630,5 +1743,26 @@ footer {
         width: 100%;
         justify-content: center;
         padding: 1rem;
+    }
+
+    .visit-us {
+        padding: 3rem 0;
+        
+        .visit-container {
+            width: 100%;
+            padding: 0 1rem;
+            
+            .visit-title {
+                margin-bottom: 1.5rem;
+            }
+            
+            .visit-list {
+                gap: 1.5rem;
+            }
+            
+            .address {
+                gap: 0.2rem;
+            }
+        }
     }
 }
