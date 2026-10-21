@@ -5,26 +5,51 @@
 /* ModelRailroad */
 @font-face {
     font-family: 'ModelRailroad';
-    src: url('assets/fonts/ModelRailroad/ModelRailroad.ttf'),
-        url('assets/fonts/ModelRailroad/ModelRailroad.woff'),
-        url('assets/fonts/ModelRailroad/ModelRailroad.woff2');
+    src: url('assets/fonts/ModelRailroad/ModelRailroad.woff2') format('woff2'),
+        url('assets/fonts/ModelRailroad/ModelRailroad.woff') format('woff'),
+        url('assets/fonts/ModelRailroad/ModelRailroad.ttf') format('truetype');
+    font-display: swap;
 }
 
 /* TrajanaSans */
 @font-face {
     font-family: 'TrajanaSans';
-    src: url('assets/fonts/TrajanaSans/TrajanaSans.ttf'),
-        url('assets/fonts/TrajanaSans/TrajanaSans.woff'),
-        url('assets/fonts/TrajanaSans/TrajanaSans.woff2'),
-        url('assets/fonts/TrajanaSans/TrajanaSansDemiBold.ttf'),
-        url('assets/fonts/TrajanaSans/TrajanaSansDemiBold.woff'),
-        url('assets/fonts/TrajanaSans/TrajanaSansDemiBold.woff2'),
-        url('assets/fonts/TrajanaSans/TrajanaSansLight.ttf'),
-        url('assets/fonts/TrajanaSans/TrajanaSansLight.woff'),
-        url('assets/fonts/TrajanaSans/TrajanaSansLight.woff2'),
-        url('assets/fonts/TrajanaSans/TrajanaSansBold.ttf'),
-        url('assets/fonts/TrajanaSans/TrajanaSansBold.woff'),
-        url('assets/fonts/TrajanaSans/TrajanaSansBold.woff2');
+    src: url('assets/fonts/TrajanaSans/TrajanaSans.woff2') format('woff2'),
+        url('assets/fonts/TrajanaSans/TrajanaSans.woff') format('woff'),
+        url('assets/fonts/TrajanaSans/TrajanaSans.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TrajanaSans';
+    src: url('assets/fonts/TrajanaSans/TrajanaSansLight.woff2') format('woff2'),
+        url('assets/fonts/TrajanaSans/TrajanaSansLight.woff') format('woff'),
+        url('assets/fonts/TrajanaSans/TrajanaSansLight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TrajanaSans';
+    src: url('assets/fonts/TrajanaSans/TrajanaSansDemiBold.woff2') format('woff2'),
+        url('assets/fonts/TrajanaSans/TrajanaSansDemiBold.woff') format('woff'),
+        url('assets/fonts/TrajanaSans/TrajanaSansDemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TrajanaSans';
+    src: url('assets/fonts/TrajanaSans/TrajanaSansBold.woff2') format('woff2'),
+        url('assets/fonts/TrajanaSans/TrajanaSansBold.woff') format('woff'),
+        url('assets/fonts/TrajanaSans/TrajanaSansBold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
 }
 
 /* ------------------VARIABLES------------------------------------------ */
@@ -141,15 +166,15 @@ body {
 
     /* Variantes de Fondo por Página */
     &.hero-destinations {
-        background-image: url('assets/img/2-DESTINATIONS/hero-bg.jpg');
+        background-image: url('assets/img/2-DESTINATIONS/hero-bg.webp');
     }
 
     &.hero-routes {
-        background-image: url('assets/img/3-ROUTES/hero-bg.jpg');
+        background-image: url('assets/img/3-ROUTES/hero-bg.webp');
     }
 
     &.hero-contact {
-        background-image: url('assets/img/4-CONTACT/hero-bg.jpg');
+        background-image: url('assets/img/4-CONTACT/hero-bg.webp');
     }
 
     /* --- LOGO (Añadido) --- */
@@ -504,7 +529,7 @@ body {
     }
 
     .hero-right {
-        background-image: url('assets/img/1-HOME/hero-bg.png');
+        background-image: url('assets/img/1-HOME/hero-bg.webp');
         background-size: cover;
         background-position: center center;
         position: relative;
@@ -889,7 +914,7 @@ body {
 .parallax-separator {
     width: 100%;
     height: 50vh;
-    background-image: url('assets/img/1-HOME/parallax.jpg');
+    background-image: url('assets/img/1-HOME/parallax.webp');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;

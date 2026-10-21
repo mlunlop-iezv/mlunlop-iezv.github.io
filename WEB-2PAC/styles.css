@@ -1,15 +1,17 @@
 @font-face {
     font-family: 'Hanken Grotesk';
-    src:  url('assets/fonts/hanken-grotesk/HankenGrotesk-Regular.woff2'),
-          url('assets/fonts/hanken-grotesk/HankenGrotesk-Regular.woff'),
-          url('assets/fonts/hanken-grotesk/HankenGrotesk-Regular.otf');
+    src:  url('assets/fonts/hanken-grotesk/HankenGrotesk-Regular.woff2') format('woff2'),
+          url('assets/fonts/hanken-grotesk/HankenGrotesk-Regular.woff') format('woff'),
+          url('assets/fonts/hanken-grotesk/HankenGrotesk-Regular.otf') format('opentype');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Niagara Solid';
-    src:  url('assets/fonts/niagara-solid/niagara-solid.woff2'),
-          url('assets/fonts/niagara-solid/niagara-solid.woff'),    
-          url('assets/fonts/niagara-solid/niagara-solid.ttf');       
+    src:  url('assets/fonts/niagara-solid/niagara-solid.woff2') format('woff2'),
+          url('assets/fonts/niagara-solid/niagara-solid.woff') format('woff'),    
+          url('assets/fonts/niagara-solid/niagara-solid.ttf') format('truetype');
+    font-display: swap;
 }
 
 
@@ -164,7 +166,7 @@ body {
   height: auto;
   padding: 2rem 5rem;
 
-  background-image: url(assets/ifmg/bg-bio.png);
+  /* background-image: none */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100%
@@ -202,7 +204,7 @@ body {
   flex: 2;
   max-width: 550px;
   height: 744px;
-  background-image: url(assets/img/bio-img1.png);
+  background-image: url(assets/img/bio-img1.webp);
   background-size: cover;
   margin-left: 2rem;
 }
@@ -218,7 +220,7 @@ body {
   flex: 2;
   max-width: 550px;
   height: 744px;
-  background-image: url(assets/img/bio-img2.jpg);
+  background-image: url(assets/img/bio-img2.webp);
   background-size: cover;
 }
 .bio-text-2 {
@@ -286,7 +288,7 @@ body {
 
 .album-banner {
   position: absolute;
-  background-image: url(assets/img/music-bg.jpg);
+  background-image: url(assets/img/music-bg.webp);
   height: 50vh;
   width: 100%;
   background-position: center;
@@ -369,7 +371,7 @@ body {
   position: relative;
   height: auto;
   background: #d9d9d9;
-  background-image: url(assets/img/on-tour-arm.png);
+  background-image: url(assets/img/on-tour-arm.webp);
   background-position:left;
   background-repeat: no-repeat;
   background-size: 30vh;
@@ -396,7 +398,7 @@ body {
 .tour-stadium {
   flex: 1; 
   min-height: 500px;
-  background-image: url('assets/img/the-forum.png'); 
+  background-image: url('assets/img/the-forum.webp'); 
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -538,32 +540,32 @@ table tbody tr:nth-child(2) a::before{
 }
 
 .merch1{
-  background-image: url(assets/img/merch/merch1-front.png);
+  background-image: url(assets/img/merch/merch1-front.webp);
   background-size: cover;
 }
 
 .merch1:hover{
-    background-image: url(assets/img/merch/merch1-back.png);
+    background-image: url(assets/img/merch/merch1-back.webp);
     background-size: cover;
 }
 
 .merch2{
-  background-image: url(assets/img/merch/cap1-front.png);
+  background-image: url(assets/img/merch/cap1-front.webp);
   background-size: cover;
 }
 
 .merch2:hover{
-    background-image: url(assets/img/merch/cap1-side.png);
+    background-image: url(assets/img/merch/cap1-side.webp);
     background-size: cover;
 }
 
 .merch3{
-  background-image: url(assets/img/merch/shirt1-front.png);
+  background-image: url(assets/img/merch/shirt1-front.webp);
   background-size: cover;
 }
 
 .merch3:hover{
-    background-image: url(assets/img/merch/shirt1-back.png);
+    background-image: url(assets/img/merch/shirt1-back.webp);
     background-size: cover;
 }
 
@@ -760,7 +762,7 @@ textarea::placeholder {
 }
 
 .footer-img {
-  background-image: url(assets/img/footer-bg.png);
+  background-image: url(assets/img/footer-bg.webp);
   width: 100%;
   height: calc(50vh - 130px);
   background-size: cover;
@@ -931,7 +933,7 @@ textarea::placeholder {
     }
 
     .bio-img-1 {
-      background-image: url('assets/img/media-queries-img/bio-img1-media.png');
+      background-image: url('assets/img/media-queries-img/bio-img1-media.webp');
       min-height: 300px;
       background-size: cover;
       background-position: top;
@@ -939,7 +941,7 @@ textarea::placeholder {
     }
 
     .bio-img-2 {
-      background-image: url('assets/img/media-queries-img/bio-img2-media.png');
+      background-image: url('assets/img/media-queries-img/bio-img2-media.webp');
       min-height: 300px;
       background-size: cover;
       background-position: top;
@@ -1074,7 +1076,7 @@ textarea::placeholder {
 
     /* --- BIOGRAPHY -------------------------------------------------- */
     .bio-img-1 {
-      background-image: url('assets/img/media-queries-img/bio-img1-media.png');
+      background-image: url('assets/img/media-queries-img/bio-img1-media.webp');
       min-height: 200px;
       background-size: contain;
       background-position: center;
@@ -1082,7 +1084,7 @@ textarea::placeholder {
     }
 
     .bio-img-2 {
-      background-image: url('assets/img/media-queries-img/bio-img2-media.png');
+      background-image: url('assets/img/media-queries-img/bio-img2-media.webp');
       min-height: 200px;
       background-size: contain;
       background-position: center;

@@ -3,9 +3,10 @@
 
 @font-face {
     font-family: 'BDNippori';
-    src: url('assets/fonts/BD-Nippori/BD-Nippori.otf'),
-        url('assets/fonts/BD-Nippori/BD-Nippori.woff'),
-        url('assets/fonts/BD-Nippori/BD-Nippori.woff2');
+    src: url('assets/fonts/BD-Nippori/BD-Nippori.woff2') format('woff2'),
+        url('assets/fonts/BD-Nippori/BD-Nippori.woff') format('woff'),
+        url('assets/fonts/BD-Nippori/BD-Nippori.otf') format('opentype');
+    font-display: swap;
 }
 
 :root {
@@ -287,7 +288,7 @@ footer {
 .home-hero {
     height: 90vh;
     width: 100%;
-    background-image: url(assets/img/1-HOME/home-bg.png);
+    background-image: url(assets/img/1-HOME/home-bg.webp);
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
@@ -590,7 +591,7 @@ footer {
 /*--------DISCIPLINES------------------------------------------------------------------------------*/
 /*--------HERO-----------------------------------------------*/
 .disciplines {
-    background-image: url(assets/img/2-SPORTS/hero-bg.png);
+    background-image: url(assets/img/2-SPORTS/hero-bg.webp);
 
     h1 {
         padding-top: 6rem;
@@ -687,17 +688,17 @@ footer {
             }
 
             .street {
-                background-image: url(assets/img/2-SPORTS/street.png);
+                background-image: url(assets/img/2-SPORTS/street.webp);
                 margin-left: auto;
             }
 
             .park {
-                background-image: url(assets/img/2-SPORTS/park.png);
+                background-image: url(assets/img/2-SPORTS/park.webp);
                 margin-right: auto;
             }
 
             .race {
-                background-image: url(assets/img/2-SPORTS/race.png);
+                background-image: url(assets/img/2-SPORTS/race.webp);
                 margin-left: auto;
             }
         }
@@ -720,7 +721,7 @@ footer {
 /*--------EVENTS------------------------------------------------------------------------------*/
 /*--------HERO-----------------------------------------------*/
 .events {
-    background-image: url(assets/img/3-EVENTS/hero-bg.png);
+    background-image: url(assets/img/3-EVENTS/hero-bg.webp);
 
     h1 {
         display: flex;
@@ -791,15 +792,15 @@ footer {
             background-position: center;
 
             &.card-1 {
-                background-image: linear-gradient(to top, var(--primary--0), transparent), url('assets/img/3-EVENTS/card-1-bg.png');
+                background-image: linear-gradient(to top, var(--primary--0), transparent), url('assets/img/3-EVENTS/card-1-bg.webp');
             }
 
             &.card-2 {
-                background-image: linear-gradient(to top, var(--primary--0), transparent), url('assets/img/3-EVENTS/card-2-bg.png');
+                background-image: linear-gradient(to top, var(--primary--0), transparent), url('assets/img/3-EVENTS/card-2-bg.webp');
             }
 
             &.card-3 {
-                background-image: linear-gradient(to top, var(--primary--0), transparent), url('assets/img/3-EVENTS/card-3-bg.png');
+                background-image: linear-gradient(to top, var(--primary--0), transparent), url('assets/img/3-EVENTS/card-3-bg.webp');
             }
 
             .upcoming-card-text {
@@ -1036,15 +1037,15 @@ footer {
                 }
 
                 &.medals-1 .medal-img {
-                    background-image: url('assets/img/3-EVENTS/m-pajon.png');
+                    background-image: url('assets/img/3-EVENTS/m-pajon.webp');
                 }
 
                 &.medals-2 .medal-img {
-                    background-image: url('assets/img/3-EVENTS/m-strombergs.png');
+                    background-image: url('assets/img/3-EVENTS/m-strombergs.webp');
                 }
 
                 &.medals-3 .medal-img {
-                    background-image: url('assets/img/3-EVENTS/j-torres.png');
+                    background-image: url('assets/img/3-EVENTS/j-torres.webp');
                 }
 
                 &:hover .medal-img {
@@ -1312,7 +1313,7 @@ footer {
 /*--------CONTACT------------------------------------------------------------------------------*/
 /*--------HERO----------------------------------------------------*/
 .contact {
-    background-image: url(assets/img/4-CONTACT/hero-bg.png);
+    background-image: url(assets/img/4-CONTACT/hero-bg.webp);
 
     h1 {
         padding-top: 6rem;
@@ -1529,7 +1530,7 @@ footer {
 
 /*--------MAP-------------------------------------------------------------*/
 .map {
-    background-image: url(assets/img/4-CONTACT/map-bg.png);
+    background-image: url(assets/img/4-CONTACT/map-bg.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
